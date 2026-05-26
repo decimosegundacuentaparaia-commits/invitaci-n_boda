@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Chamberi Super Display';
+  src: url('/fonts/ChamberiSuperDisplay.woff2') format('woff2'),
+       url('/fonts/ChamberiSuperDisplay.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-serif: "Times New Roman", Times, "Nimbus Roman No9 L", serif;
+  --font-sans: "Chamberi Super Display", "Chamberi", Georgia, serif;
+
+  --color-surface: #fff8f3;
+  --color-surface-dim: #e6d8c5;
+  --color-surface-bright: #fff8f3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fff2e2;
+  --color-surface-container: #fbecd9;
+  --color-surface-container-high: #f5e6d3;
+  --color-surface-container-highest: #efe0cd;
+  --color-on-surface: #221a0f;
+  --color-on-surface-variant: #444939;
+  --color-inverse-surface: #372f22;
+  --color-inverse-on-surface: #feefdb;
+  --color-outline: #747967;
+  --color-outline-variant: #c4c9b4;
+  --color-surface-tint: #496800;
+  --color-primary: #476500;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #5d7f13;
+  --color-on-primary-container: #faffe7;
+  --color-inverse-primary: #add461;
+  --color-secondary-brand: #8e4c31;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #ffa988;
+  --color-on-secondary-container: #793c22;
+  --color-tertiary: #735c00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #cba72f;
+  --color-on-tertiary-container: #4e3d00;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --spacing-container-max: 1200px;
+  --spacing-section-gap: 8rem;
+  --spacing-margin-edge: 4rem;
+  --spacing-gutter: 2rem;
+}
+
+@layer base {
+  html, body {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+  }
+  .font-serif {
+    font-weight: 700;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(to bottom, rgba(34, 26, 15, 0.4), rgba(34, 26, 15, 0.6));
+}
+
+.animate-spin-slow {
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
